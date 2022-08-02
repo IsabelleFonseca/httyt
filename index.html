@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mapa Teste</title>
+
+		<link rel="stylesheet" type="text/css" href="javascript/style.css" />
+		<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+
+		<script type="text/javascript" src="leaflet/leaflet.js"></script>
+		<script type="text/javascript" src="javascript/tab.js"></script>
+
+		<!-- Caminhos paras os dados das camadas -->
+		<script type="text/javascript" src="data/_Trechos_concess_es_federais_jul22_vf.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h1>Mapa Teste</h1>
+		</div>
+		<div class="maintab">
+			<button id="mapBtn" class="mainTablinks" onclick="openMainTab(event, 'mapArea')">Mapa</button>
+			<button class="mainTablinks" onclick="openMainTab(event, 'attributesArea')">Tabelas de Atributos</button>
+		</div>
+		<div id="mapArea" class="mainTabContent">
+			<div id="map"></div>
+		</div>
+
+		<div id="attributesArea" class="mainTabContent">
+			<div class="tab">
+				<button id="_Trechos_concess_es_federais_jul22_vf_btn" class="tablinks" onclick="openTab(event, '_Trechos_concess_es_federais_jul22_vf_tab')">Trechos_concessões_federais_jul22_vf</button>
+			</div>
+			<div id="_Trechos_concess_es_federais_jul22_vf_tab" class="tabcontent"></div>
+		</div>
+		<script type="text/javascript" src="javascript/map.js"></script>
+		<script type="text/javascript" src="javascript/attributes.js"></script>
+		<script>document.getElementById('mapBtn').click();</script>	</body>
+</html>
